@@ -1,0 +1,130 @@
+{% extends 'layout.html.twig' %}
+
+{% block home %}active{% endblock %}
+
+{% block body %}
+
+    <!--PreLoader Ends-->
+    <div class="container-fluid py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "A propos"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "A propos"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container fs-5 mb-5">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid w-100 h-100 fit-cover"
+                             src="{{ asset('images/galerie/about_1.jpg') }}" alt="eau la la">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+                    <p class="mb-4">
+                        {{"Dans un monde en constante évolution, où les défis environnementaux et sociaux semblent se multiplier, l'accès à l'eau potable demeure un besoin essentiel et non négociable pour chaque individu."|trans}}
+                        {{"C'est dans ce contexte que l'entreprise EAULALA s'est engagée à voler au secours des populations en leur procurant une eau potable de qualité supérieure, et ce, de manière durable et responsable."|trans}}
+                    </p>
+                    <p class="mb-0">
+                        {{"Le nom EAU LA LA incarne un cri d'urgence, un appel à la conscience collective pour reconnaître l'importance vitale de l'eau dans nos vies. Plus qu'une simple entreprise, EAU LA LA s'est érigée en défenseur passionné de l'accès universel à l'eau potable, plaçant la population au cœur de ses préoccupations et actions."|trans}}
+                        {{"Forte de sa vision humaniste, EAU LA LA s'est donné pour mission de relever les défis liés à l'eau et de soulager les communautés en situation de crise."|trans}}
+                    </p>
+
+                </div>
+            </div>
+            <div class="row g-5 mt-2">
+                <div class="col-lg-12">
+                    <p class="mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        {{"Consciente que près d'un milliard de personnes n'ont toujours pas accès à de l'eau potable, l'entreprise a pris sur elle la tache de réduire cet écart."|trans}}
+                        {{"Grâce à des partenariats stratégiques avec des organisations humanitaires et des agences gouvernementales, EAU LALA déploie des efforts concrets pour acheminer de l'eau potable dans des régions touchées par la pénurie."|trans}}
+                    </p>
+                    <p class="mb-5 wow fadeInUp" data-wow-delay="0.3s">
+                        {{"Cependant, l'engagement d'EAU LA LA ne se limite pas à des actions ponctuelles."|trans}}
+                        {{"L'entreprise s'attache à former des communautés locales à la gestion de l'eau, garantissant ainsi un impact durable."|trans}}
+                        {{"Des ateliers de sensibilisation à l'hygiène et à la préservation des ressources hydriques sont organisés, transformant les bénéficiaires en gardiens de l'eau dans leurs propres communautés."|trans}}
+                    </p>
+                    <p class="mb-5 wow fadeInUp" data-wow-delay="0.5s">
+                        {{"L'innovation est au cœur de l'approche d'EAU LA LA en matière de secours à la population."|trans}}
+                        {{"En développant des solutions de purification d'eau efficaces et durables, l'entreprise répond aux besoins complexes et variés des régions touchées."|trans}}
+                        {{"Des technologies novatrices, telles que la filtration avancée et l'utilisation responsable de l'énergie, permettent à EAU LA LA de surmonter les obstacles techniques qui limitent souvent les efforts humanitaires traditionnels."|trans}}
+                    </p>
+                </div>
+            </div>
+            <div class="row g-5">
+
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+                    <p class="mb-4">
+                        {{"L'impact d'EAU LA LA se mesure en termes de vies transformées."|trans}}
+                        {{"Chaque enfant qui boit de l'eau propre, chaque famille qui échappe à la menace des maladies hydriques, chaque communauté qui se dresse contre la pénurie d'eau, est un témoignage de l'engagement sincère de l'entreprise envers le bien-être humain."|trans}}
+                    </p>
+                    <p class="mb-0">
+                        {{"L'idée sous-jacente est que l'impact d'une organisation ou d'une initiative ne devrait pas être mesuré uniquement en termes financiers ou statistiques, mais aussi en termes de transformations positives qu'elle apporte dans la vie des individus ou des communautés qu'elle sert."|trans}}
+                    </p>
+
+                </div>
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="h-100">
+                        <img class="img-fluid w-100 h-100 fit-cover"
+                             src="{{ asset('images/about_2.avif') }}" alt="eau la la">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 mt-2">
+                <div class="col-lg-12">
+                    <h2 class="mb-5 fw-bold wow fadeInUp" data-wow-delay="0.1s">
+                        {{ "Nos Objectifs"|trans }}
+                    </h2>
+                    <div class="row">
+                        <div class="col-1"><h4 class="ms-lg-5 mt-3 wow fadeInLeft" data-wow-delay="0.3s"><i class="fa fa-circle-arrow-right text-primaire"></i></h4></div>
+                        <div class="col-11"><h4 class="ms-0 mt-3 wow fadeInRight" data-wow-delay="0.5s"> {{ "Réduire de 50% le taux de prévalence des maladies hydriques"|trans }}</h4></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><h4 class="ms-lg-5 mt-3 wow fadeInLeft" data-wow-delay="0.9s"><i class="fa fa-circle-arrow-right text-primaire"></i></h4></div>
+                        <div class="col-11"><h4 class="ms-0 mt-3 wow fadeInRight" data-wow-delay="0.9s"> {{ "Réduire de 50% le taux de mortalité infantile due à l’absence d’eau potable"|trans }}</h4></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"><h4 class="ms-lg-5 mt-3 wow fadeInLeft" data-wow-delay="0.9s"><i class="fa fa-circle-arrow-right text-primaire"></i></h4></div>
+                        <div class="col-11"><h4 class="ms-0 mt-3 wow fadeInRight" data-wow-delay="0.9s"> {{ "Réduire de moitié les distances de parcours à la recherche de l’eau"|trans }}</h4></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1"><h4 class="ms-lg-5 mt-3 wow fadeInLeft" data-wow-delay="0.9s"><i class="fa fa-circle-arrow-right text-primaire"></i></h4></div>
+                        <div class="col-11"><h4 class="ms-0 mt-3 wow fadeInRight" data-wow-delay="0.9s"> {{ "Contribuer aux efforts des pouvoirs publics et valoriser le développement des énergies vertes suivant les résolutions mondiales sur les changements climatiques"|trans }}</h4></div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-lg-12 mt-3 about-background">
+            </div>
+            <div class="col-lg-12 fs-5 text-center">
+                <p class="mt-5 wow fadeInUp" data-wow-delay="0.9s">
+                    {{ "Conscient que nous sommes un maillon essentiel d'une chaîne de soins de santé, à GNT PHARMA, nous considérons nos actions bien plus que de simples services rendus mains une contribution positive à la santé publique en garantissant un accès sans faille aux médicaments et aux produits pharmaceutiques."|trans }}
+                    {{ "Notre parcours jusqu'à présent n'est qu'un prélude à ce que nous envisageons pour l'avenir. Nous sommes déterminés à élargir notre portée, à innover davantage et à continuer à être un acteur clé dans la distribution de produits pharmaceutiques."|trans }}
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

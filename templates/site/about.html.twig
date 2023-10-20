@@ -1,0 +1,186 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "A propos"|trans }} - Gracam {% endblock %}
+{% block about %}active{% endblock %}
+{% block body %}
+    <!-- Header Start -->
+    <div class="container-fluid py-5 mb-5 page-header">
+
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "A propos"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "A propos"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container fs-5 mb-5">
+            <div class="row g-5 mt-5">
+
+                <div class="col-lg-6 p-5 bg-primaire-soft wow fadeInRight" data-wow-delay="0.1s">
+                    <h3>Mot du president </h3>
+                    <h5 class="mt-5">{{'Chers collaborateurs, partenaires et amis de Gracam'|trans}},</h5>
+                    <p class="mb-4">
+
+
+                        {{"C'est avec une immense fierté et un profond sentiment de gratitude que je m'adresse à vous aujourd'hui en tant que président de Gracam."|trans}}
+                        {{"Depuis notre création, notre entreprise a parcouru un chemin extraordinaire, évoluant et grandissant grâce à l'engagement inébranlable de notre équipe et à la confiance continue de nos précieux clients et partenaires."|trans}}
+                    </p>
+                    <p class="mb-0">
+                        {{"Gracam est bien plus qu'une simple entreprise d'extraction de granulats."|trans}}
+                        {{"Nous sommes un symbole d'excellence, d'innovation et de responsabilité environnementale dans l'industrie."|trans}}
+                        {{"Notre engagement envers la qualité inégalée de nos produits et notre dévouement envers la préservation de l'environnement sont au cœur de notre mission."|trans}}
+                    </p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary px-5 py-3 float-lg-end mt-5" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        {{ 'Lire la suite'|trans }}
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" id="hjhj">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">{{'Mot du president'|trans}}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5 class="my-4">{{'Chers collaborateurs, partenaires et amis de Gracam'|trans}},</h5>
+                                    <p class="mb-4">
+
+
+                                        {{"C'est avec une immense fierté et un profond sentiment de gratitude que je m'adresse à vous en tant que président de Gracam."|trans}}
+                                        {{"Depuis notre création, notre entreprise a parcouru un chemin extraordinaire, évoluant et grandissant grâce à l'engagement inébranlable de notre équipe et à la confiance continue de nos précieux clients et partenaires."|trans}}
+                                    </p>
+                                    <p class="mb-4">
+                                        {{"Gracam est bien plus qu'une simple entreprise d'extraction de granulats."|trans}}
+                                        {{"Nous sommes un symbole d'excellence, d'innovation et de responsabilité environnementale dans l'industrie."|trans}}
+                                        {{"Notre engagement envers la qualité inégalée de nos produits et notre dévouement envers la préservation de l'environnement sont au cœur de notre mission."|trans}}
+                                    </p>
+                                    <p class="mb-4">
+                                        {{"Au fil des années, nous avons réussi à repousser les limites de l'excellence en investissant dans la technologie de pointe, en formant notre équipe aux meilleures pratiques de l'industrie, et en développant des partenariats solides."|trans}}
+                                        {{"Ces efforts ont abouti à des produits de la plus haute qualité, des services sur mesure pour nos clients et une empreinte environnementale minimale."|trans}}
+                                    </p>
+                                    <p class="mb-4">
+                                        {{"Je tiens à exprimer ma profonde gratitude envers chaque membre de notre équipe, dont le dévouement et l'expertise sont les piliers de notre succès."|trans}}
+                                        {{"Vous incarnez l'esprit de Gracam, et je suis honoré de travailler à vos côtés."|trans}}
+                                    </p>
+                                    <p class="mb-4">
+                                        {{"Je remercie également nos clients et partenaires pour leur confiance indéfectible."|trans}}
+                                        {{"Votre soutien continu nous pousse à aller toujours plus loin, à innover et à élever nos normes pour répondre à vos besoins et à surpasser vos attentes."|trans}}
+                                    </p>
+                                    <p class="mb-4">
+                                        {{"Alors que nous avançons vers l'avenir, je tiens à réaffirmer notre engagement envers l'excellence, la durabilité et la satisfaction de nos clients."|trans}}
+                                        {{"Nous continuerons à évoluer, à investir dans la recherche et le développement, et à contribuer positivement aux communautés dans lesquelles nous opérons."|trans}}
+                                    </p>
+                                    <p class="mb-4">
+                                        {{"Ensemble, nous bâtissons un avenir solide et prometteur pour Gracam."|trans}}
+                                        {{"Je vous invite à partager notre vision, à collaborer avec nous et à être partie prenante de notre succès continu."|trans}}
+                                    </p>
+                                    <h5>  {{"Je vous remercie encore une fois pour votre soutien indéfectible."|trans}}</h5>
+
+                                    <h6> {{'Avec gratitude et détermination'|trans}},</h6>
+
+                                    [Signature du Président]
+
+                                    [Votre nom]
+                                    Président de Gracam
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="position-relative h-100">
+                        <p class="mb-4">
+                            {{"Chez Gracam, nous sommes fiers d'être un acteur majeur de l'industrie de l'extraction de granulats, offrant des produits de haute qualité et des services exceptionnels à nos clients depuis de nombreuses années."|trans}}
+                            {{"Nous sommes bien plus qu'une entreprise d'extraction de matériaux ; nous sommes le fondement de projets de construction réussis, de routes durables et d'infrastructures solides tout en respectant les normes environnementales les plus strictes."|trans}}
+                        </p>
+                        <h4>Notre Histoire</h4>
+                        <p class="mb-4">
+                            {{"Fondée depuis plusieurs décennies, Gracam est le fruit d'une vision audacieuse pour créer une entreprise qui soit à la fois un leader dans l'industrie des granulats et un exemple de responsabilité environnementale."|trans}}
+                            {{"Notre parcours a été marqué par des investissements continus dans la technologie, la formation de notre personnel, et la recherche de méthodes d'extraction novatrices, permettant ainsi à Gracam de devenir un acteur de premier plan dans le secteur."|trans}}
+                        </p>
+                        <h4>Notre Engagement envers la Qualité</h4>
+                        <p class="mb-0">
+                            {{"La qualité est au cœur de tout ce que nous faisons."|trans}}
+                            {{"Nos granulats sont extraits avec soin, triés avec précision et rigoureusement testés pour garantir qu'ils répondent aux normes les plus strictes de l'industrie."|trans}}
+                            {{"Nous sommes engagés envers la durabilité environnementale et nous nous efforçons de minimiser notre empreinte écologique tout en offrant des matériaux de première qualité."|trans}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5">
+
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+                    <h3 class="mt-5">Une Gamme Complète de Produits </h3>
+                    <p class="mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                        {{"Chez Gracam, nous comprenons que chaque projet est unique."|trans}}
+                        {{"C'est pourquoi nous proposons une gamme complète de granulats, adaptés à une variété d'applications, des projets de construction résidentielle aux grands travaux d'infrastructure."|trans}}
+                        {{"Nos granulats sont disponibles dans différentes tailles et spécifications pour répondre aux besoins spécifiques de chaque projet."|trans}}
+                    </p>
+                    <h3 class="mt-5">Des Partenariats Solides</h3>
+                    <p class="mb-2 wow fadeInUp" data-wow-delay="0.1s">
+                        {{"Chez Gracam, nous comprenons que chaque projet est unique."|trans}}
+                        {{"C'est pourquoi nous proposons une gamme complète de granulats, adaptés à une variété d'applications, des projets de construction résidentielle aux grands travaux d'infrastructure."|trans}}
+                        {{"Nos granulats sont disponibles dans différentes tailles et spécifications pour répondre aux besoins spécifiques de chaque projet."|trans}}
+                    </p>
+                </div>
+
+                <div class="col-lg-6 mx-0 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="h-100 mt-5">
+                        <img class="img-fluid w-100 h-100 fit-cover"
+                             src="{{ asset('images/about.jpg') }}" alt="eau la la">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <h3 class="mt-5">Engagement Environnemental</h3>
+                    <p class="wow fadeInUp" data-wow-delay="0.3s">
+                        {{"Chez Gracam, nous comprenons l'importance de préserver notre environnement."|trans}}
+                        {{"C'est pourquoi nous avons mis en place des pratiques d'extraction durables visant à minimiser notre impact sur la nature."|trans}}
+                        {{"Nous sommes fiers d'opérer de manière responsable, en réhabilitant les sites d'extraction après leur utilisation, en utilisant des technologies de pointe pour réduire les émissions."|trans}}
+                    </p>
+                    <h3>Innovation et Durabilité</h3>
+                    <p class="wow fadeInUp" data-wow-delay="0.3s">
+                        {{"Gracam se positionne en tant que leader de l'innovation dans l'industrie des granulats."|trans}}
+                        {{"Nous investissons dans les technologies les plus avancées pour améliorer notre efficacité opérationnelle tout en réduisant notre impact sur l'environnement."|trans}}
+                        {{"Notre engagement envers la durabilité se reflète dans chaque aspect de notre entreprise, de la gestion responsable des ressources à l'utilisation de techniques d'extraction respectueuses de l'écosystème."|trans}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-12 mt-3 about-background">
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+{% endblock %}
+
+
+

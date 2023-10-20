@@ -1,0 +1,113 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Produits"|trans }} - Eau là là {% endblock %}
+{% block Produits %}active{% endblock %}
+{% block body %}
+    <!-- Header Start -->
+    <div class="container-fluid py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "Produits"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "Produits"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Produits Start -->
+    <div class="container-fluid py-5">
+        <div class="container fs-5 mb-5">
+            <div class="row gx-5 gy-3">
+
+                <div class="col-lg-6 mt-5 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="bg-secondaire-soft p-4">
+
+                            <img src="{{ asset('images/gravier15-25.jpg') }}"class="w-100">
+
+                        <h4 class="mb-3 mt-5">{{"Garvier 15/25"|trans}}</h4>
+                        <p>
+                            {{"Les graviers 15/25, également connus sous le nom de granulats 15/25, sont des matériaux de construction utilisés couramment dans l'industrie de la construction, du génie civil et de l'aménagement paysager."|trans}}
+                            {{"La notation \"15/25\" se réfère à la taille des particules des graviers, exprimée en millimètres."|trans}}
+                            {{"Plus précisément, cela signifie que les graviers 15/25 ont des particules dont la taille varie de 15 millimètres (0,59 pouce) à 25 millimètres (0,98 pouce) de diamètre."|trans}}
+                        </p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>15 000/metre cube</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Commande Minimum: 8 metres Cubes</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Livraison 10 000 gratuit a partir de 100 metres cubes</p>
+                        <a href="{{ path('order', { 'produit' : 1}) }}" class="btn bg-primaire text-white fw-bold w-100 mt-2 py-3">{{ "Commander "|trans }}</a>
+                    </div>
+                </div>
+                <div class="col-lg-6  mt-5 wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="bg-secondaire-soft p-4">
+
+                        <img src="{{ asset('images/gravier5-15.jpg') }}"class="w-100">
+
+                        <h4 class="mb-3 mt-5">{{"Garvier 5/15"|trans}}</h4>
+                        <p>
+                            {{"Les graviers 15/25, également connus sous le nom de granulats 15/25, sont des matériaux de construction utilisés couramment dans l'industrie de la construction, du génie civil et de l'aménagement paysager."|trans}}
+                            {{"La notation \"15/25\" se réfère à la taille des particules des graviers, exprimée en millimètres."|trans}}
+                            {{"Plus précisément, cela signifie que les graviers 15/25 ont des particules dont la taille varie de 15 millimètres (0,59 pouce) à 25 millimètres (0,98 pouce) de diamètre."|trans}}
+                        </p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>15 000/metre cube</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Commande Minimum: 8 metres Cubes</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Livraison 10 000 gratuit a partir de 100 metres cubes</p>
+                        <a href="{{ path('order', { 'produit' : 2}) }}" class="btn bg-primaire text-white fw-bold w-100 mt-2 py-3">{{ "Commander "|trans }}</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="bg-secondaire-soft p-4  h-100">
+
+                        <img src="{{ asset('images/sable.jpg') }}"class="w-100">
+
+                        <h4 class="mb-3 mt-5">{{"Sable carrière 0/5"|trans}}</h4>
+                        <p>
+
+
+                            {{"Cette désignation indique que les particules de sable se situent dans une plage de tailles allant de 0 à 5 millimètres."|trans}}
+                            {{"Plus précisément, cela signifie que le sable extrait ou utilisé dans ce contexte spécifique comprend des particules de sable de différentes tailles, allant des plus fines (0 mm) aux plus grosses (5 mm)."|trans}}
+
+                        </p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>15 000/metre cube</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Commande Minimum: 8 metres Cubes</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Livraison 10 000 gratuit a partir de 100 metres cubes</p>
+                        <a href="{{ path('order', { 'produit' : 3}) }}" class="btn bg-primaire text-white fw-bold w-100 mt-2 py-3">{{ "Commander "|trans }}</a>
+                    </div>
+                </div>
+                <div class="col-lg-6  mt-5 wow fadeInRight" data-wow-delay="0.1s">
+                    <div class="bg-secondaire-soft p-4 h-100">
+
+                        <img src="{{ asset('images/tout-venant.jpg') }}"class="w-100">
+
+                        <h4 class="mb-3 mt-5">{{"Tout Venant 0/31.5"|trans}}</h4>
+                        <p>
+                            {{"Le granulé tout-venant est généralement composé de particules de diverses tailles, allant des plus fines aux plus grosses."|trans}}
+                            {{"Il peut contenir une gamme de matériaux, notamment du sable, du gravier, des pierres concassées, de la roche, de la terre, etc."|trans}}
+                        </p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>15 000/metre cube</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Commande Minimum: 8 metres Cubes</p>
+                        <p class="text-primaire fw-medium"><i class="fa fa-check text-primaire me-2"></i>Livraison 10 000 gratuit a partir de 100 metres cubes</p>
+                        <a href="{{ path('order', { 'produit' : 4}) }}" class="btn bg-primaire text-white fw-bold w-100 mt-2 py-3">{{ "Commander "|trans }}</a>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <!-- Produits End -->
+
+{% endblock %}
+
+
+

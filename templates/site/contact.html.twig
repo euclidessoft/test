@@ -1,0 +1,110 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Contactez nous"|trans }} - Eau là là {% endblock %}
+{% block contact %}active{% endblock %}
+{% block body %}
+    <div class="container-fluid py-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ 'Contactez-nous'|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ 'Contactez-nous'|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mb-5 py-5">
+        <div class="container">
+            {% for message in app.flashes('notice') %}
+                <div class="alert alert-success  mb-2 alert-dismissible fade show radius-10">
+                    {{ message|trans }}
+                </div>
+            {% endfor %}
+            <div class="row g-5 h-100">
+                <div class="col-lg-6 col-md-12 h-100 wow fadeInUp" data-wow-delay="0.5s">
+
+                    <div class="row g-2 h-100">
+                        <div class="col-md-6">
+                            {{ form_start(form, {'attr':{'id': 'form'}}) }}
+                            <div class="mt-2">
+                                {{ form_row(form.nom, {'label': 'Votre Nom', 'attr': {'placeholder':'Nom'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mt-2">
+                                {{ form_row(form.email, {'label': 'Votre Email', 'attr': {'placeholder':'Email'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mt-3">
+                                {{ form_row(form.sujet, {'label': 'Sujet', 'attr': {'placeholder':'Sujet'}}) }}
+                            </div>
+                            <div class="mt-4">
+                                {{ form_row(form.message, {'label': 'Votre Message', 'attr': {'placeholder':'Message'}}) }}
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primaire btn-effect w-100 mt-3"
+                                    type="submit">{{ 'Envoyer'|trans }}</button>
+                            {{ form_rest(form) }}
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="text-dark animated slideInDown">{{ 'Contactez-nous'|trans }}</h3>
+                    <p class="text-dark">
+                        {{ 'Merci de partager vos impressions avec Eau là là.'|trans }}
+                        {{ 'Vous pouvez nous écrire pour n\'importe quel besoin et nous nous ferons un plaisir de l\'étudier.'|trans }}
+                    </p>
+                    <p class="mb-2 fw-medium">
+                        <i class="fa fa-map-marker-alt fa-2x me-2 text-rouge"></i>
+                        Adesse Eau la la, Cameroun
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone fa-2x me-2 text-rouge"></i>
+                        <span class="me-4">
+                           <a href="tel:+237 6 93 61 36 96" class="text-dark fw-medium">
+                            +237 6 93 61 36 96
+                        </a>
+                       </span>
+                        <span class="breadcrumb-item me-4">
+                           <a href="tel:+237 6 93 61 36 96" class="text-dark fw-medium">
+                            +237 6 74 77 16 39
+                        </a>
+                       </span>
+                        <span>
+                           <a href="tel:+237 6 93 61 36 96" class="text-dark fw-medium">
+                            +237 6 55 06 42 48
+                        </a>
+                       </span>
+                    </p>
+                    <p class="mb-2">
+                        <a href="mailto:lnatlantiscameroon@gmail.com" class="text-dark fw-medium">
+                            <i class="fa fa-envelope fa-2x me-2 text-rouge"></i>
+                            infos@ealwayseaulala.com
+                        </a>
+                    </p>
+
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15919.351404603876!2d9.690652132652732!3d4.053471488895929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1061125fd8ac86e9%3A0x8c209e5fc42dae26!2sAkwa%2C%20Douala%2C%20Cameroun!5e0!3m2!1sfr!2snl!4v1693070800365!5m2!1sfr!2snl"
+                            style="border:0; width: 100%; height: 46%; box-sizing: border-box"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

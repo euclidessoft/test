@@ -1,0 +1,141 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Carrières"|trans }}  - Eau là là {% endblock %}
+{% block carriere %}active{% endblock %}
+{% block body %}
+    <!-- Header Start -->
+    <div class="container-fluid py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated zoomIn">
+                        {{ "Carrières"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "Carrières"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services section-padding">
+        <div class="container fs-5">
+            <div class="row">
+                <div class="col-lg-3 col-12">
+                    <nav>
+                        <div class="nav nav-tabs flex-column mt-5 align-items-baseline" id="nav-tab" role="tablist">
+                            <button class="nav-link w-100 active border-top-left-1" id="nav-business-tab" data-bs-toggle="tab" data-bs-target="#nav-eco-forage" type="button" role="tab" aria-controls="nav-business" aria-selected="true">
+                                <span class=" fs-4 fw-semibold text-primaire">
+                                    {{ "Gouvernance"|trans}}
+                                </span>
+                            </button>
+                            <button class="nav-link w-100  border-top-left-1" id="nav-strategy-tab" data-bs-toggle="tab" data-bs-target="#nav-electro-forage" type="button" role="tab" aria-controls="nav-strategy" aria-selected="false">
+                                <a href="{{ path('Carriere_offre') }}">
+                                    <span class="fs-4 fw-semibold text-primaire">
+                                        {{ "Offres d'Emploi"|trans}}
+                                    </span>
+                                </a>
+                            </button>
+                            <button class="nav-link w-100 border-top-left-1" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-eco-puits" type="button" role="tab" aria-controls="nav-video" aria-selected="false">
+                                <a href="{{ path('Carriere_candidature') }}">
+                                    <span class="fs-4 fw-semibold text-primaire">
+                                        {{ "Canditure Spontanée"|trans}}
+                                    </span>
+                                </a>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-lg-9 col-12">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-eco-forage" role="tabpanel" aria-labelledby="nav-intro-tab">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p class="mb-2">
+
+                                            {{"Chez Gracam, nous considérons la gouvernance d'entreprise et la culture d'entreprise comme des éléments fondamentaux pour réaliser notre mission, créer de la valeur à long terme pour nos parties prenantes, et promouvoir un environnement de travail positif et responsable."|trans}}
+                                    </p>
+                                    <h4 class="mb-4">1. {{"Gouvernance d'Entreprise"|trans}} :</h4>
+                                    <p class="mb-2">
+                                        <h5 class="mt-5">a. {{ "Responsabilité du Conseil d'Administration :"|trans }}</h5>
+                                    {{"Le conseil d'administration de Gracam est responsable de superviser la direction de l'entreprise et de veiller à ce que les intérêts des actionnaires soient protégés."|trans}}
+                                    </p>
+                                    <h5 class="mt-5"> b. {{"Composition du Conseil d'Administration :"|trans}}</h5>
+                                    <p class="mb-4">
+
+                                        {{"Le conseil sera composé de membres indépendants, d'experts de l'industrie et de dirigeants de l'entreprise, assurant une diversité d'expertise et de perspectives."|trans}}
+                                    </p>
+                                    <h5 class="mt-5"> c. {{"Transparence et Divulgation"|trans}}:</h5>
+                                    <p class="mb-4">
+                                        {{"Nous nous engageons à fournir des informations financières et opérationnelles précises et transparentes, disponibles en temps opportun pour nos parties prenantes."|trans}}
+                                    </p>
+                                    <h4 class="mb-4">
+                                    2. {{"Culture d'Entreprise"|trans}}
+                                    </h4>
+                                    <h5 class="mt-5"> a. {{"Engagement envers nos Employés"|trans}} :</h5>
+                                    <p class="mb-4">
+                                        {{"Nous croyons en un environnement de travail respectueux, inclusif et sûr."|trans}}
+                                        {{"Nous encourageons la diversité, l'égalité des chances, et le développement professionnel de nos employés."|trans}}
+                                    </p>
+                                    <h5 class="mt-5">b. {{"Intégrité et Éthique"|trans}} :</h5>
+                                    <p class="mb-4">
+                                        {{"L'intégrité est au cœur de notre culture."|trans}}
+                                        {{"Nous attendons de tous les membres de Gracam qu'ils agissent de manière éthique, en évitant tout conflit d'intérêts et en respectant les lois et les normes éthiques."|trans}}
+                                    </p>
+                                    <h5 class="mt-5">c. {{"Responsabilité Sociale et Environnementale"|trans}} :</h5>
+                                    <p class="mb-4">
+                                        {{"Nous nous engageons à minimiser notre impact environnemental, à soutenir nos communautés locales, et à contribuer positivement à la société en tant qu'entreprise responsable."|trans}}
+                                    </p>
+                                    <h4 class="mb-4">
+                                    3. {{"Leadership et Gestion"|trans}}
+                                    </h4>
+                                    <h5 class="mt-5">a. {{"Leadership Responsable"|trans}} :</h5>
+                                    <p class="mb-4">
+                                        {{"Nos dirigeants sont tenus de montrer l'exemple en matière de gouvernance et de culture d'entreprise."|trans}}
+                                        {{"Ils sont responsables de la mise en œuvre de nos valeurs et de nos objectifs."|trans}}
+                                    </p>
+                                    <h5 class="mt-5">b. {{"Gestion des Risques"|trans}} :</h5>
+                                    <p class="mb-4">
+                                        {{"Nous adoptons une approche proactive de la gestion des risques, en identifiant, évaluant et atténuant les risques potentiels dans toutes nos activités."|trans}}
+                                    </p>
+                                    <h4 class="mb-4">
+                                    4. {{"Évaluation et Amélioration"|trans}} :
+                                    </h4>
+                                    <h5 class="mt-5">a. {{"Évaluation Régulière"|trans}} :</h5>
+                                    <p class="mb-4">
+                                        {{"Nous évaluerons régulièrement notre gouvernance d'entreprise et notre culture d'entreprise pour garantir qu'elles sont conformes à nos valeurs et à nos objectifs."|trans}}
+                                    </p>
+                                    <h5 class="mt-5">b. {{"Amélioration Continue"|trans}} :</h5>
+                                    <p class="mb-4">
+                                        {{"Nous nous engageons à apporter des améliorations continues à notre politique de gouvernance et de culture d'entreprise en fonction des retours d'information et des évolutions de l'entreprise et de l'industrie."|trans}}
+                                    </p>
+                                    <p class="mb-4">
+                                        {{"Chez Gracam, nous sommes déterminés à créer une entreprise durable, respectueuse de l'éthique, et orientée vers la responsabilité sociale."|trans}}
+                                        {{"Cette politique de gouvernance et de culture d'entreprise servira de cadre pour guider nos actions et notre comportement à tous les niveaux de l'organisation."|trans}}
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                       </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- About End -->
+{% endblock %}

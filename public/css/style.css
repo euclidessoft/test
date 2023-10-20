@@ -1,0 +1,93 @@
+/********** Style CSS **********/
+
+/*------------------------------------------------------------------
+    IMPORT FONTS
+-------------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i);
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+:root {
+    --light: #f0fbfc;
+    --dark: #181d38;
+    --primaire: #00a8f3; /*  rgb(0, 168, 243) */
+    --primaire-soft: #92dafc; /*  rgb(3, 156, 79) */
+    --secondaire: #6bc9e0; /*  rgb(197, 251, 174)  */
+    --secondaire-soft: #EDF1FC; /*  rgb(197, 251, 174)  */
+    --gris: #888888; /*  rgb(136, 136, 136)  */
+    --gris-clair: #eeeeee; /*  rgb(238, 238, 238)  */
+    --gris-fonce: #333333; /*  rgb(51, 51, 51)  */
+    --blanc: #ffffff; /*  rgb(255, 255, 255)  */
+    --noir: #000000; /*  rgb(0, 0, 0)  */
+    --twitter: #1d9bf0; /*  rgb(29, 155, 240)  */
+    --facebook: #385898; /*  rgb(56, 88, 152)  */
+    --linkedin: #004182; /*  rgb(0, 65, 130)  */
+    --instagram: #e83e8c; /*  rgb(232, 62, 140)  */
+    --youtube: #ff0000; /*  rgb(232, 62, 140)  */
+    --duree: 2000ms;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.btn-primary{
+    background-color: var(--primaire) !important;
+    border: 1px solid var(--secondaire);
+}
+
+.bg-primaire{
+    background-color: var(--primaire) !important;
+}
+
+.text-primaire{
+    color: var(--primaire) !important;
+}
+
+.bg-primaire-soft{
+    background-color: var(--primaire-soft) !important;
+}
+
+.bg-secondaire{
+    background-color: var(--secondaire) !important;
+}
+.bg-secondaire-soft{
+    background-color: var(--secondaire-soft) !important;
+}
+
+.bg-blanc{
+    background-color: var(--blanc) !important;
+}
+
+.container{
+    transition: all ease-in-out 0.7s !important;
+}
+
+.container-fluid{
+    transition: all ease-in-out 0.7s !important;
+}
+.nav-bar{
+    background-color: var(--blanc);
+    padding-bottom: unset !important;
+}
+
+
+@media (max-width: 991.98px) {
+
+}
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+
+}

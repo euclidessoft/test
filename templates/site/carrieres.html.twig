@@ -1,0 +1,114 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Carrières"|trans }}  - Eau là là {% endblock %}
+{% block carriere %}active{% endblock %}
+{% block body %}
+    <!-- Header Start -->
+    <div class="container-fluid py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "Carrières"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "Carrières"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services section-padding">
+        <div class="container">
+            <div class="row">
+                {% for message in app.flashes('notice') %}
+                    <div class="alert alert-success  mb-2 alert-dismissible fade show radius-10">
+                        {{ message|trans }}
+                    </div>
+                {% endfor %}
+                <div class="col-lg-6 col-12">
+                    <nav>
+                        <div class="nav nav-tabs flex-column  mt-5 align-items-baseline" id="nav-tab" role="tablist">
+                            <button class="nav-link w-100  border-top-left-1" id="nav-business-tab" data-bs-toggle="tab" data-bs-target="#nav-eco-forage" type="button" role="tab" aria-controls="nav-business" aria-selected="true">
+                                <a href="{{ path('Carriere') }}">
+                                    <span class=" fs-4 fw-semibold text-primaire">
+                                        {{ "Gouvernance"|trans}}
+                                    </span>
+                                </a>
+                            </button>
+                            <button class="nav-link w-100 border-top-left-1" id="nav-strategy-tab" data-bs-toggle="tab" data-bs-target="#nav-electro-forage" type="button" role="tab" aria-controls="nav-strategy" aria-selected="false">
+                                    <a href="{{ path('Carriere_offre') }}">
+                                        <span class="fs-4 fw-semibold text-primaire">
+                                            {{ "Offres d'Emploi"|trans}}
+                                        </span>
+                                    </a>
+                            </button>
+                            <button class="nav-link w-100 active border-top-left-1" id="nav-video-tab" data-bs-toggle="tab" data-bs-target="#nav-eco-puits" type="button" role="tab" aria-controls="nav-video" aria-selected="false">
+                                <span class="fs-4 fw-semibold text-primaire">
+                                    {{ "Canditure Spontanée"|trans}}
+                                </span>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="tab-content" id="nav-tabContent">
+
+                        <div class="tab-pane fade  mt-5 show active" id="nav-eco-puits" role="tabpanel" aria-labelledby="nav-video-tab">
+                            <div class="col-lg-12">
+                                {{ form_start(form, {'attr':{'id': 'form'}}) }}
+                                <div class="mt-4">
+                                    {{ form_row(form.nom, {'label': 'Nom', 'attr': {'placeholder':'Nom'}}) }}
+                                </div>
+                                <div class="mt-4">
+                                    {{ form_row(form.prenom, {'label': 'Prénom', 'attr': {'placeholder':'Prénom'}}) }}
+                                </div>
+                                <div class="mt-4">
+                                    {{ form_row(form.datnaiss, {'label': 'Date de naissance', 'attr': {'placeholder':'Date de naissance'}}) }}
+                                </div>
+                                <div class="mt-4">
+                                    {{ form_row(form.lieunaiss, {'label': 'Lieu de naissance', 'attr': {'placeholder':'Votre lieu de naissance'}}) }}
+                                </div>
+                                <div class="mt-4">
+                                    {{ form_row(form.activite, {'label': 'Votre domaine d\'activité', 'attr': {'placeholder':'Votre domaine activité'}}) }}
+                                </div>
+                                <div class="mt-4">
+                                    {{ form_row(form.niveau, {'label': 'Votre Niveau d\'etude', 'attr': {'placeholder':'Votre Niveau etude'}}) }}
+                                </div>
+                                <div class="mt-4">
+                                    {{ form_row(form.cv, {'label': false, 'attr': {'onchange':'label_input()'}}) }}
+                                    <button class="btn btn-primary text-bold ms-0" onclick="upload()">
+                                        Selectionnez votre CV <i class="fa fa-upload ml-1"></i>
+                                    </button><label id="choice"></label>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <button type="submit" class="btn btn-primary btn-effect text-bold m-5 ms-0">
+                                        Soumettre <i class="fa fa-chevron-circle-right ml-1 mt-n1 align-middle"></i>
+                                    </button>
+                                </div>
+                                {{ form_rest(form) }}
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- About End -->
+{% endblock %}

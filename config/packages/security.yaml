@@ -1,0 +1,43 @@
+security:
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    role_hierarchy:
+        ROLE_ADMIN:       [ROLE_CONSEILLER]
+
+
+
+    providers:
+        sakkane:
+            entity: 
+               class: App\Entity\User
+               property: email
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            provider: sakkane
+            form_login:
+                login_path: security_login
+                check_path: security_login
+                default_target_path: /rv/start
+                
+
+
+            logout:
+                path: security_logout
+                target: security_login
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+         - { path: ^/hopital, roles: ROLE_CONSEILLER }
+         - { path: ^/service, roles: ROLE_CONSEILLER }
+         - { path: ^/indispo, roles: ROLE_CONSEILLER }
+         - { path: ^/patient, roles: ROLE_CONSEILLER }
+         - { path: ^/rv, roles: ROLE_CONSEILLER }
+        # - { path: ^/profile, roles: ROLE_USER }

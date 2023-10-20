@@ -1,0 +1,85 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Carrières"|trans }}  - Eau là là {% endblock %}
+{% block carriere %}active{% endblock %}
+{% block body %}
+    <!-- Header Start -->
+    <div class="container-fluid py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "Carrières"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "Carrières"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="services section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <nav>
+                        <div class="nav nav-tabs flex-column  mt-5 align-items-baseline" id="nav-tab" role="tablist">
+                            <button class="nav-link w-100 border-top-left-1" id="nav-business-tab"
+                                    data-bs-toggle="tab" data-bs-target="#nav-eco-forage" type="button" role="tab"
+                                    aria-controls="nav-business" aria-selected="true">
+                                <a href="{{ path('Carriere') }}">
+                                    <span class=" fs-4 fw-semibold text-primaire">
+                                        {{ "Gouvernance"|trans }}
+                                    </span>
+                                </a>
+
+                            </button>
+
+                            <button class="nav-link w-100 active border-top-left-1" id="nav-strategy-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-electro-forage" type="button" role="tab"
+                                    aria-controls="nav-strategy" aria-selected="false">
+                                <span class="fs-4 fw-semibold text-primaire">
+                                    {{ "Offres d'Emploi"|trans }}
+                                </span>
+                            </button>
+
+                            <button class="nav-link w-100 border-top-left-1" id="nav-video-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-eco-puits" type="button" role="tab" aria-controls="nav-video"
+                                    aria-selected="false">
+                                <a href="{{ path('Carriere_candidature') }}">
+                                    <span class="fs-4 fw-semibold text-primaire">
+                                        {{ "Canditure Spontanée"|trans }}
+                                    </span>
+                                </a>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-6 col-12">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-electro-forage" role="tabpanel"
+                             aria-labelledby="nav-strategy-tab">
+                            <h1 class="mt-5">Offres disponibles</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- About End -->
+{% endblock %}

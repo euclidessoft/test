@@ -1,0 +1,94 @@
+{% extends 'layout.html.twig' %}
+{% block title %} {{ "Galerie"|trans }} - Eau là là{% endblock %}
+{% block gallery %} active {% endblock %}
+{%  block photobox_css %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/photobox/1.9.2/photobox/photobox.min.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <div class="container-fluid py-5 page-header">
+        {{ include('gnt/page-header.html.twig') }}
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-white fw-bold mt-5 mb-3 animated fadeIn">
+                        {{ "Galerie photo"|trans }}
+                    </h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a class="text-white" href="{{ path('Accueil') }}">
+                                    {{ "Accueil"|trans }}
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item text-white">
+                                {{ "Galerie photo"|trans }}
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 mb-5">
+        <div class="container mb-5">
+
+            <div class="row justify-content-center mt-5">
+                <div id="gallery">
+                    <a href="{{ asset('images/galerie/1.jpg') }}" id="1"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/1.jpg') }}" alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/2.jpg') }}" id="2"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/2.jpg') }}" alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/3.jpg') }}" id="3"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/3.jpg') }}" alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/4.jpg') }}" id="4"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/4.jpg') }}" alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/5.jpg') }}" id="5"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/5.jpg') }}" alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/6.jpg') }}" id="6"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/6.jpg') }}"
+                             alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/7.jpg') }}" id="7"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/7.jpg') }}"
+                             alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/8.jpg') }}" id="8"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/8.jpg') }}"
+                             alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/9.jpg') }}" id="9"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/9.jpg') }}"
+                             alt="">
+                    </a>
+                    <a href="{{ asset('images/galerie/10.jpg') }}" id="10"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/10.jpg') }}"
+                             alt="">
+                    </a>
+                    <a id="11" href="{{ asset('images/galerie/11.jpg') }}" id="11"
+                       class="gallery-thumbnail">
+                        <img src="{{ asset('images/galerie/11.jpg') }}"
+                             alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%  block photobox_js %}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/photobox/1.9.2/photobox/jquery.photobox.min.js" ></script>
+    {% endblock %}
+{% endblock %}
